@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>COVID-19 Italy Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+<!-- Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- jQueryUI styling -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<!--Script for slider-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
+
+<!--Script for map-->
+<script type="text/javascript" src="https://d3js.org/topojson.v3.min.js"></script>
+<script src="https://unpkg.com/topojson-client@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Script for MDS scatterplot-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+
+
+<body onresize="resize()">
+
+	<div id = 'page'>
+		<div id = 'slider-div'>
+			<label>Date: <span id = 'year'>24 February 2020 - </span></label>
+			<div id = 'date-slider'></div>
+			<button type="button" class="btn btn-primary" onclick="execute()">PLOT MDS</button>
+			<div id = 'title'>COVID-19 ITALIAN DASHBOARD</div>
+		</div>
+
+		<div id = 'map-div'>
+			<div id = 'legend'></div>
+			<div id = 'map'></div>
+			
+		</div>
+
+		<div id = 'par-coo-div'>
+			<div id = 'par-coo'></div>
+		</div>
+		<div id = 'scatterplot-div'>
+			<div id = 'scatterplot'></div>
+		</div>
+
+
+		<div id = 'boxplot-div' class='row'>
+			
+			<div id='text' class="row">
+				<div id = 'index'>SWABS</div>
+				<div id = 'index'>DECEASED</div>
+				<div id = 'index'>TOTAL CASES</div>
+			</div>
+		
+			<div id = 'boxplot-1'></div>
+			
+			<div id = 'boxplot-2'></div>
+			
+			<div id = 'boxplot-3'></div>
+			
+		</div>
+		
+	</div>
+	
+	<script src = 'js/slider.js'></script>
+	
+	<script src = 'js/map.js'></script>
+	<script src = 'js/par_coo.js'></script>
+	<script src = 'js/scatterplot.js'></script>
+
+	<script src = 'js/boxplot.js'></script>
+	
+	
+</body>
+</html>
